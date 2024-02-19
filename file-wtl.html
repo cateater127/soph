@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Batman or Angry Emoji</title>
+	<style>
+		body {
+			background-image: url('file:///C:/Users/nekkt/OneDrive/Desktop/soph.jpeg');
+			background-size: cover;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Helvetica Neue', Arial, sans-serif;
+		}
+		
+		.button-container {
+			text-align: center;
+		}
+		
+		.button {
+			background-color: #FF6F91;
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 20px;
+			cursor: pointer;
+			border-radius: 12px;
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+		}
+	</style>
+</head>
+<body>
+	<div class="button-container">
+		<button class="button" id="batman-button">Yes, I am Batman</button>
+		<button class="button" id="angry-button">No, I am not Batman</button>
+		<div id="result" style="display: none;">
+			<img id="result-image" src="" alt="Result">
+			<audio id="result-audio" src="" autoplay></audio>
+		</div>
+	</div>
+	<script>
+		const angryButton = document.getElementById('angry-button');
+		const batmanButton = document.getElementById('batman-button');
+		const result = document.getElementById('result');
+		const resultImage = document.getElementById('result-image');
+		const resultAudio = document.getElementById('result-audio');
+
+		angryButton.addEventListener('click', function() {
+			result.style.display = 'block';
+			resultImage.src = 'https://www.emojibase.org/emojis/apple/1f623.png';
+			resultAudio.src = '';
+		});
+
+		batmanButton.addEventListener('click', function() {
+			result.style.display = 'block';
+			resultImage.src = 'https://i.pinimg.com/originals/81/0d/82/810d82ad3b2ef40a38049b9669301d78.png';
+			resultAudio.src = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3';
+		});
+	</script>
+</body>
+</html>
